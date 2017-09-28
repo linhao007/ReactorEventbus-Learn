@@ -10,6 +10,7 @@ import reactor.core.config.PropertiesConfigurationReader;
 import www.linhao007.enumtype.EventType;
 import www.linhao007.event.Lifecycle;
 import www.linhao007.event.Listener.UserListener;
+import www.linhao007.event.receive.UserReceive;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -33,6 +34,9 @@ public class EventBusService implements Lifecycle {
     @Resource
     private UserListener userListener;
 
+    @Resource
+    private UserReceive userReceive;
+
     /**
      * 初始化事件驱动模型
      */
@@ -48,7 +52,11 @@ public class EventBusService implements Lifecycle {
 
     private void initListener() {
         LOGGER.info(".................init listener start............");
+        LOGGER.info("发布订阅模型开始初始化");
         userEventBus.on($(EventType.CREATE_USER), userListener);
+
+        LOGGER.info("请求应达模型开始初始化");
+        userEventBus.receive($(EventType.RETURN_USER_ID), userReceive);
         LOGGER.info(".................init listener end............");
     }
 

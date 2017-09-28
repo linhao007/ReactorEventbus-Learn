@@ -4,7 +4,8 @@ package www.linhao007.enumtype;
  * Created by linhu on 17/9/28.
  */
 public enum EventType {
-    CREATE_USER(2000, "创建新用户");
+    CREATE_USER(2000, "发布订阅模式--创建新用户"),
+    RETURN_USER_ID(3000, "请求应答模式--返回用户ID");
 
     public int code;
     public String desc = "";

@@ -25,7 +25,7 @@ public class Application {
         user.setName("linhao007");
         user.setIdentityId(1234567899L);
         user.setSex("man");
-        userService.SyncCreateUser(user);
+        userService.getUserId(user);
         Thread.sleep(1000L);
         LOGGER.info("end");
     }

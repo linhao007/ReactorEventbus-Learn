@@ -4,11 +4,20 @@ package www.linhao007.pojo;
  * Created by linhu on 17/9/28.
  */
 public class User {
+    private Long userId;
     private String name;
     private Long identityId;
     private Integer age;
     private String sex;
 
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
     public String getName() {
         return name;
@@ -45,7 +54,8 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "userId=" + userId +
+                ", name='" + name + '\'' +
                 ", identityId=" + identityId +
                 ", age=" + age +
                 ", sex='" + sex + '\'' +
