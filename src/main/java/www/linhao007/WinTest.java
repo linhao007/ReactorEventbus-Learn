@@ -11,11 +11,11 @@ import org.apache.commons.lang3.tuple.Triple;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
  * Created by linhu on 17/10/16.
+ * 抽奖概率算法
  */
 public class WinTest {
     public static void main(String[] args) {
@@ -25,7 +25,6 @@ public class WinTest {
 
     public static void testWin() {
         Integer winrobabilityP = 100 / 20; //中奖概率
-        ConcurrentHashMap<Integer, String> prize = new ConcurrentHashMap();
 
         Triple<Integer, Integer, String> product1 = new ImmutableTriple<>(1, 1, "iphone8");
         Triple<Integer, Integer, String> product2 = new ImmutableTriple<>(2, 10000, "奖品1");
