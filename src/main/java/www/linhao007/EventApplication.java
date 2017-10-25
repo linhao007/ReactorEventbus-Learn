@@ -10,9 +10,9 @@ import www.linhao007.pojo.User;
 /**
  * Created by linhu on 17/9/28.
  */
-public class Application {
+public class EventApplication {
     private static UserService userService;
-    protected static Logger LOGGER = LoggerFactory.getLogger(Application.class);
+    protected static Logger LOGGER = LoggerFactory.getLogger(EventApplication.class);
 
     static {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("spring-context.xml");

@@ -29,6 +29,7 @@
         <fast-json>1.2.29</fast-json>
         <google-java>18.0</google-java>
         <common-lang>2.6</common-lang>
+        <lombok-version>1.16.14</lombok-version>
     </properties>
 
     <dependencies>
@@ -116,5 +117,18 @@
             <version>3.4</version>
         </dependency>
         <!-- logback end -->
+
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.14</version>
+        </dependency>
     </dependencies>
 </project>
